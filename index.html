@@ -166,17 +166,17 @@
 
   <div class="box">
     <div class="top-title">RIAZ HUSSAIN DATABASE</div>
-    <h2>Ã°Å¸âÂ SIM DATA TERMINAL</h2>
+    <h2>SIM DATA TERMINAL</h2>
     <div class="input-container">
       <input type="text" id="number" placeholder="ENTER TARGET NUMBER" required />
     </div>
-    <button onclick="fetchData()">Ã¢ÂÅ½ EXECUTE QUERY</button>
+    <button onclick="fetchData()">EXECUTE QUERY</button>
 
     <div id="responseBox"></div>
 
-    <button id="shareButton" onclick="shareWhatsApp()" style="display: none;">Ã°Å¸âÂ² EXPORT TO WHATSAPP</button>
-    <button class="whatsapp-btn" onclick="window.open('https://whatsapp.com/channel/0029Vaghq2Q2ER6qcRhijo0S ', '_blank')">Ã°Å¸âÂ¢ JOIN WHATSAPP CHANNEL</button>
-    <div class="footer">DEVELOPED BY Riaz Hussain Solangi</div>
+    <button id="shareButton" onclick="shareWhatsApp()" style="display: none;">EXPORT TO WHATSAPP</button>
+    <button class="whatsapp-btn" onclick="window.open('https://whatsapp.com/channel/0029Vaghq2Q2ER6qcRhijo0S ', '_blank')">JOIN WHATSAPP CHANNEL</button>
+    <div class="footer">DEVELOPED BY RIAZ HUSSAIN SOLANGI</div>
   </div>
 
   <script>
@@ -254,11 +254,11 @@
             const content = `
 > DATABASE ENTRY FOUND
 > -------------------
-Ã°Å¸âÅ¾ MOBILE: ${user.Mobile || "NOT FOUND"}
-Ã°Å¸âÂ¤ NAME: ${user.Name || "NOT FOUND"}
-Ã°Å¸â â CNIC: ${user.CNIC || "NOT FOUND"}
-Ã°Å¸âÂ ADDRESS: ${user.Address || "NOT FOUND"}
-Ã°Å¸âÂ¶ OPERATOR: ${user.Operator || "NOT FOUND"}
+MOBILE: ${user.Mobile || "NOT FOUND"}
+NAME: ${user.Name || "NOT FOUND"}
+CNIC: ${user.CNIC || "NOT FOUND"}
+ADDRESS: ${user.Address || "NOT FOUND"}
+OPERATOR: ${user.Operator || "NOT FOUND"}
             `;
             responseBox.innerText = content;
             shareButton.style.display = "inline-block";
