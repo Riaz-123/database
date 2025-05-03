@@ -170,7 +170,7 @@
     <div class="input-container">
       <input type="text" id="number" placeholder="ENTER TARGET NUMBER" required />
     </div>
-    <button onclick="fetchData()">⏎ EXECUTE QUERY</button>
+    <button onclick="fetchData()">EXECUTE QUERY ⏎</button>
 
     <div id="responseBox"></div>
 
@@ -237,7 +237,7 @@
         return;
       }
 
-      responseBox.innerHTML = `<div>CONNECTING TO DATABASE... <span class="blink">......</span></div>`;
+      responseBox.innerHTML = `<div>CONNECTING TO DATABASE... <span class="blink">****</span></div>`;
       responseBox.style.display = "block";
       shareButton.style.display = "none";
 
