@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTGM SIM DATABASE</title>
+
+    <meta name="google-site-verification" content="f96JuOe-CWzh5vm-NkMrXgo1tp3eyoaZLaBlSO6Umi4" />
+
+    <script type='text/javascript' src='//pl26965045.profitableratecpm.com/dd/47/2c/dd472cd77f640a463a654d992134f5df.js'></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a2a3a, #0d1a2a); /* Darker, modern gradient */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #e0e6ed; /* Light text for dark background */
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3em;
+            color: #a0a8b4;
+            margin-bottom: 50px;
+            font-weight: 600;
+            text-align: center; /* Center the subtitle too */
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.08); /* Semi-transparent white */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 25px; /* More rounded */
+            box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+            max-width: 500px; /* Slightly wider container */
+            width: 90%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        input {
+            width: calc(100% - 40px);
+            padding: 18px 20px;
+            margin: 18px 0;
+            border: 1px solid #4a90e2; /* Blue border */
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent input background */
+            color: #ffffff;
+            font-size: 1.15em;
+            font-weight: 600; /* Bolder input text */
+            border-radius: 12px; /* More rounded */
+            text-align: center;
+            outline: none;
+            box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder {
+            color: #bbbbbb;
+            opacity: 0.8;
+        }
+
+        input:focus {
+            border-color: #6aabfc; /* Lighter blue on focus */
+            box-shadow: 0px 0px 15px rgba(106, 171, 252, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        button {
+            width: calc(100% - 40px);
+            padding: 18px;
+            font-size: 1.15em;
+            font-weight: 700; /* Bold buttons */
+            border: none;
+            border-radius: 12px; /* More rounded */
+            background: linear-gradient(135deg, #4a90e2, #5a9cec); /* Blue gradient */
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out; /* Removed transform for shake */
+            margin-top: 18px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            transform: none; /* No movement on hover */
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #5a9cec, #4a90e2);
+        }
+
+        button:active {
+            transform: none; /* No movement on click */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Neon effect (keeping for consistency in look, but removing hover animation) */
+        button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+            transform: rotate(45deg);
+            transition: opacity 0.5s ease; /* Only opacity transition */
+            opacity: 0;
+        }
+
+        button:hover::before {
+            transform: rotate(45deg); /* No rotation on hover */
+            opacity: 0.1; /* Subtle shine on hover */
+        }
+
+
+        .contact-button {
+            background: linear-gradient(135deg, #27ae60, #2ecc71) !important; /* Green gradient for WhatsApp */
+        }
+        .contact-button:hover {
+            background: linear-gradient(135deg, #2ecc71, #27ae60) !important;
+        }
+
+        .more-tools-button {
+            background: linear-gradient(135deg, #c0392b, #e74c3c) !important; /* Red gradient for More Tools */
+        }
+        .more-tools-button:hover {
+            background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+        }
+
+
+        .response-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            padding: 30px;
+            margin-top: 30px;
+            color: #e0e6ed;
+            text-align: center;
+            max-width: 95%;
+            width: 1000px; /* Wider response box for horizontal display */
+            box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.4);
+            overflow-x: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .response-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .result-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .result-card {
+            background-color: rgba(255, 255, 255, 0.05); /* Light background for each card */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            padding: 25px;
+            flex: 1 1 300px; /* Grow and shrink, base width 300px */
+            max-width: 380px; /* Max width for individual cards */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            text-align: left;
+            word-wrap: break-word;
+            min-width: 280px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .result-card:hover {
+            transform: none; /* No movement on hover */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Keep original shadow on hover */
+        }
+
+        .result-card strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #6aabfc; /* Lighter blue for labels */
+            font-weight: 700;
+            font-size: 0.95em;
+            text-transform: uppercase;
+        }
+        .result-card span {
+            font-weight: 600; /* Bold for values */
+            color: #ffffff;
+            font-size: 1.05em;
+        }
+
+
+        .error {
+            color: #ff6b6b; /* Softer red */
+            font-weight: 700;
+            font-size: 1.1em;
+            display: block; /* Ensure it takes full width */
+            margin-bottom: 15px; /* Space it out from the next line */
+        }
+
+        .highlight-text {
+            color: #ffd700; /* Yellow highlight color */
+            font-weight: 700;
+        }
+
+        .copy-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .copy-button {
+            background: linear-gradient(135deg, #e67e22, #f39c12); /* Orange gradient */
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: 700;
+            border-radius: 12px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .copy-button:hover {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            transform: none; /* No movement on hover */
+            box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+        }
+        .copy-button:active {
+            transform: none; /* No movement on click */
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* Toast Message Styling */
+        .toast-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            background-color: rgba(0, 0, 0, 0.85); /* Darker, more prominent */
+            color: white;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 18px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncier transition */
+            pointer-events: none;
+        }
+
+        .toast-popup.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .toast-popup .icon {
+            font-size: 3.5em;
+            color: #28a745;
+        }
+        .toast-popup.error .icon {
+            color: #dc3545;
+        }
+
+        .toast-popup .message {
+            font-size: 1.3em;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        /* Loading Wheel */
+        .loading-wheel {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #6aabfc; /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto; /* Center the wheel */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .response-box {
+                width: 95%;
+            }
+            .result-card {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+            .subtitle {
+                font-size: 1.1em;
+                margin-bottom: 40px;
+            }
+
+            .container {
+                padding: 30px;
+            }
+
+            input, button {
+                width: calc(100% - 30px);
+                padding: 15px 15px;
+                font-size: 1.05em;
+            }
+
+            .response-box {
+                padding: 25px;
+            }
+
+            .result-card {
+                flex: 1 1 100%;
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 25px;
+                border-radius: 20px;
+            }
+
+            input, button {
+                width: calc(100% - 20px);
+                font-size: 0.95em;
+                padding: 14px 10px;
+            }
+            button i {
+                margin-right: 8px;
+                font-size: 1em;
+            }
+            .response-box {
+                padding: 20px;
+                border-radius: 20px;
+            }
+            .result-card {
+                padding: 20px;
+            }
+            .toast-popup {
+                padding: 20px 25px;
+                border-radius: 15px;
+            }
+            .toast-popup .icon {
+                font-size: 3em;
+            }
+            .toast-popup .message {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+<script>
+<!-- code by https://www.html-code-generator.com -->
+document.write(unescape('%0A%20%20%20%20%3Ch1%3EFTGM%20SIM%20DATABASE%3C/h1%3E%0A%20%20%20%20%3Cdiv%20class%3D%22subtitle%22%3EDeveloped%20By%20Rana%20Faisal%20Ali%3C/div%3E%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20id%3D%22number%22%20placeholder%3D%22Enter%20phone%20number%22%20required%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20id%3D%22fetchData%22%3E%3Ci%20class%3D%22fas%20fa-search%22%3E%3C/i%3ESearch%20Now%3C/button%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22https%3A//wa.me/+923327795111%22%20target%3D%22_blank%22%20style%3D%22display%3A%20block%3B%20width%3A%20100%25%3B%20text-align%3A%20center%3B%20text-decoration%3A%20none%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbutton%20class%3D%22contact-button%22%3E%3Ci%20class%3D%22fas%20fa-headset%22%3E%3C/i%3E%20Get%20New%20Number%20Data%3C/button%3E%0A%20%20%20%20%20%20%20%20%3C/a%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22https%3A//whatsapp.com/channel/0029VbAzazM2kNFp4p1qIZ2P%22%20target%3D%22_blank%22%20style%3D%22display%3A%20block%3B%20width%3A%20100%25%3B%20text-align%3A%20center%3B%20text-decoration%3A%20none%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbutton%20class%3D%22https%3A//whatsapp.com/channel/0029VbAzazM2kNFp4p1qIZ2P%22%3E%3Ci%20class%3D%22fab%20fa-whatsapp%22%3E%3C/i%3E%20Get%20More%20Free%20Tools%3C/button%3E%0A%20%20%20%20%20%20%20%20%3C/a%3E%0A%20%20%20%20%3C/div%3E'));
+</script>
+
+    
+
+    <div id="responseBox" class="response-box"></div>
+
+    <div id="toastPopup" class="toast-popup">
+        <div class="icon"></div>
+        <div class="message"></div>
+    </div>
+
+    <script>
+        // Function to show toast popup
+        function showToast(message, type) {
+            const toastPopup = document.getElementById('toastPopup');
+            const toastIcon = toastPopup.querySelector('.icon');
+            const toastMessage = toastPopup.querySelector('.message');
+
+            // Reset classes
+            toastPopup.classList.remove('success', 'error');
+            toastIcon.innerHTML = '';
+
+            toastMessage.textContent = message;
+
+            if (type === 'success') {
+                toastPopup.classList.add('success');
+                toastIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
+            } else if (type === 'error') {
+                toastPopup.classList.add('error');
+                toastIcon.innerHTML = '<i class="fas fa-times-circle"></i>';
+            }
+
+            toastPopup.classList.add('show');
+
+            setTimeout(() => {
+                toastPopup.classList.remove('show');
+            }, 2500); // Popup disappears after 2.5 seconds
+        }
+
+        // Fallback for older browsers or non-secure contexts for clipboard API
+        function fallbackCopyTextToClipboard(text) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";  // Avoid scrolling to bottom
+            textArea.style.left = "-9999px";
+            textArea.style.top = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                var successful = document.execCommand('copy');
+                if (successful) {
+                    showToast('Copied to clipboard!', 'success');
+                } else {
+                    showToast('Failed to copy (fallback)!', 'error');
+                }
+            } catch (err) {
+                    showToast('Fallback: Unable to copy!', 'error');
+            } finally {
+                 document.body.removeChild(textArea);
+            }
+        }
+
+        document.getElementById("fetchData").addEventListener("click", async function() {
+            const number = document.getElementById("number").value;
+            const responseBox = document.getElementById("responseBox");
+
+            // Hide and reset response box before new data
+            responseBox.classList.remove("show");
+            responseBox.innerHTML = '';
+
+            if (number === "") {
+                responseBox.innerHTML = `<strong class="error">❌ Please enter a valid number.</strong>`;
+                responseBox.classList.add("show");
+                return;
+            }
+
+            // Show loading wheel
+            responseBox.innerHTML = '<div class="loading-wheel"></div>';
+            responseBox.classList.add("show");
+
+            // Use the allorigins.win proxy to bypass CORS if needed
+            const url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://famofcfallxd.serv00.net/apis/simdataapi.php?num=${number}`)}`;
+
+            try {
+                const response = await fetch(url);
+                const result = await response.json();
+
+                // Check if result.contents is a string and parse it
+                let apiData;
+                try {
+                    apiData = JSON.parse(result.contents);
+                } catch (parseError) {
+                    // This means the API did not return valid JSON or returned an empty response
+                    apiData = { status: "error", message: "Invalid API response or no data." };
+                }
+
+                if (apiData.status === "success" && apiData.data.length > 0) {
+                    let resultCardsHTML = '<div class="result-item">';
+                    let copyTextContent = ''; // To store text for copying
+
+                    apiData.data.forEach(user => {
+                        resultCardsHTML += `
+                            <div class="result-card">
+                                <strong>Name:</strong> <span>${user.Name}</span><br>
+                                <strong>Mobile:</strong> <span>${user.Mobile}</span><br>
+                                <strong>CNIC:</strong> <span>${user.CNIC}</span><br>
+                                <strong>Operator:</strong> <span>${user.Operator}</span><br>
+                                <strong>Address:</strong> <span>${user.Address}</span>
+                            </div>`;
+                        // Populate copy content
+                        copyTextContent += `Name: ${user.Name}\nMobile: ${user.Mobile}\nCNIC: ${user.CNIC}\nOperator: ${user.Operator}\nAddress: ${user.Address}\n\n`;
+                    });
+
+                    resultCardsHTML += '</div>';
+
+                    // Add Copy Button
+                    resultCardsHTML += `
+                        <div class="copy-button-container">
+                            <button class="copy-button" id="copyResultButton"><i class="fas fa-copy"></i> COPY ALL DATA</button>
+                        </div>`;
+
+                    responseBox.innerHTML = resultCardsHTML;
+
+                    // Add event listener for copy button
+                    document.getElementById("copyResultButton").addEventListener("click", function() {
+                        if (navigator.clipboard && window.isSecureContext) {
+                            navigator.clipboard.writeText(copyTextContent)
+                                .then(() => {
+                                    showToast('Results copied to clipboard!', 'success');
+                                })
+                                .catch(err => {
+                                    console.error('Failed to copy using Clipboard API: ', err);
+                                    showToast('Failed to copy!', 'error');
+                                    fallbackCopyTextToClipboard(copyTextContent); // Fallback even if clipboard API fails
+                                });
+                        } else {
+                            // Fallback for HTTP or older browsers
+                            fallbackCopyTextToClipboard(copyTextContent);
+                        }
+                    });
+
+                } else {
+                    responseBox.innerHTML = `
+                        <strong class="error">This Number is Not In Our Database!</strong>
+                        <span>If You Want To Get This Number Details Simply Click On "<span class="highlight-text">Get New Number Data</span>" Button and Get Details In Low Price.</span>
+                    `;
+                }
+            } catch (error) {
+                responseBox.innerHTML = `
+                    <strong class="error">This Number is Not In Our Database!</strong>
+                    <span>If You Want To Get This Number Details Simply Click On "<span class="highlight-text">Get New Number Data</span>" Button and Get Details In Low Price.</span>
+                `;
+            } finally {
+                responseBox.classList.add("show"); // Show response box after content is loaded
+            }
+        });
+    </script>
+
+</body>
+</html>
